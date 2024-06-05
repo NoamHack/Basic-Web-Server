@@ -1,10 +1,10 @@
-package com.example.firstproject.service;
+package com.example.basicwebserver.service;
 
-import com.example.firstproject.dto.GradeDTO;
-import com.example.firstproject.entity.Grade;
-import com.example.firstproject.entity.Student;
-import com.example.firstproject.repository.GradeRepository;
-import com.example.firstproject.repository.StudentRepository;
+import com.example.basicwebserver.dto.GradeDTO;
+import com.example.basicwebserver.entity.Grade;
+import com.example.basicwebserver.entity.Student;
+import com.example.basicwebserver.repository.GradeRepository;
+import com.example.basicwebserver.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

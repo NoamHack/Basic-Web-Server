@@ -1,14 +1,14 @@
-package com.example.firstproject;
+package com.example.basicwebserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FirstProjectApplication {
+public class BasicWebServer {
 
     public static void main(String[] args)
     {
-        SpringApplication.run(FirstProjectApplication.class, args);
+        SpringApplication.run(BasicWebServer.class, args);
     }
 
 }

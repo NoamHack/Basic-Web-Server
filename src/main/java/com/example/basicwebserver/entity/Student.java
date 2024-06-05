@@ -1,8 +1,6 @@
-package com.example.firstproject.entity;
+package com.example.basicwebserver.entity;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.ForeignKey;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
 import org.hibernate.annotations.OnDelete;

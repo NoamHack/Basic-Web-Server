@@ -1,9 +1,8 @@
-package com.example.firstproject.controller;
+package com.example.basicwebserver.controller;
 
 
-import com.example.firstproject.dto.StudentDTO;
-import com.example.firstproject.entity.Student;
-import com.example.firstproject.service.StudentService;
+import com.example.basicwebserver.dto.StudentDTO;
+import com.example.basicwebserver.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

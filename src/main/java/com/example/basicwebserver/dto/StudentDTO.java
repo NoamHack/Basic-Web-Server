@@ -1,4 +1,4 @@
-package com.example.firstproject.dto;
+package com.example.basicwebserver.dto;
 
 import lombok.Data;
 

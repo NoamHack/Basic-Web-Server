@@ -1,7 +1,7 @@
-package com.example.firstproject.controller;
+package com.example.basicwebserver.controller;
 
-import com.example.firstproject.dto.GradeDTO;
-import com.example.firstproject.service.GradeService;
+import com.example.basicwebserver.dto.GradeDTO;
+import com.example.basicwebserver.service.GradeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,6 +1,6 @@
-package com.example.firstproject.service;
+package com.example.basicwebserver.service;
 
-import com.example.firstproject.dto.GradeDTO;
+import com.example.basicwebserver.dto.GradeDTO;
 
 import java.util.List;
 

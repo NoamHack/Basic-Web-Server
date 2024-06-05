@@ -1,6 +1,6 @@
-package com.example.firstproject.repository;
+package com.example.basicwebserver.repository;
 
-import com.example.firstproject.entity.Grade;
+import com.example.basicwebserver.entity.Grade;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface GradeRepository extends JpaRepository<Grade, Long> {

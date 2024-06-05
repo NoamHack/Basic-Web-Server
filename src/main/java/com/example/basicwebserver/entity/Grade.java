@@ -1,4 +1,4 @@
-package com.example.firstproject.entity;
+package com.example.basicwebserver.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.ForeignKey;
