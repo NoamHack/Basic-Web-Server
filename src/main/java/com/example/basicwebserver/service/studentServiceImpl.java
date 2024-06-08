@@ -62,4 +62,15 @@ public class studentServiceImpl implements StudentService {
         grades.forEach(grade -> grade.setStudent(null)); // Update the many side
         studentRepository.delete(student);
     }
+
+    public List<StudentDTO> getStudentsWithAverageAbove(Double average) {
+        List<Student> students = studentRepository.findStudentsWithAverageAbove(average);
+        return students.stream().map(this::convertToDTO).collect(Collectors.toList());
+    }
+
+    public List<StudentDTO> getStudentsWithNoGrades() {
+        List<Student> students = studentRepository.findStudentsWithNoGrades();
+        return students.stream().map(this::convertToDTO).collect(Collectors.toList());
+    }
+
 }
