@@ -3,6 +3,7 @@ package com.example.basicwebserver.controller;
 
 import com.example.basicwebserver.dto.StudentDTO;
 import com.example.basicwebserver.service.StudentService;
+import com.example.basicwebserver.service.gradeServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +14,7 @@ import java.util.List;
 @RequestMapping("/api/students")
 public class StudentController {
     private final StudentService studentServiceImpl;
+    private final gradeServiceImpl gradeServiceImpl;
 
     @GetMapping
     public List<StudentDTO> getAllStudents() {
@@ -32,5 +34,10 @@ public class StudentController {
     @DeleteMapping("/{id}")
     public void deleteStudent(@PathVariable Long id) {
         studentServiceImpl.deleteStudent(id);
+    }
+
+    @GetMapping("/highest/{subject}")
+    public StudentDTO getStudentWithHighestGradeInSubject(@PathVariable String subject) {
+        return gradeServiceImpl.getStudentWithHighestGradeInSubject(subject);
     }
 }

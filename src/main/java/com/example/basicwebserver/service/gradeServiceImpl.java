@@ -1,6 +1,7 @@
 package com.example.basicwebserver.service;
 
 import com.example.basicwebserver.dto.GradeDTO;
+import com.example.basicwebserver.dto.StudentDTO;
 import com.example.basicwebserver.entity.Grade;
 import com.example.basicwebserver.entity.Student;
 import com.example.basicwebserver.repository.GradeRepository;
@@ -65,12 +66,28 @@ public class gradeServiceImpl implements GradeService {
         return gradeDTO;
     }
 
-
     public void deleteGrade(Long gradeId) {
         Grade grade = gradeRepository.findById(gradeId).orElse(null);
         Student student = grade.getStudent();
         student.getGrades().remove(grade); // Update the one side
         gradeRepository.delete(grade);
+    }
+
+    public StudentDTO getStudentWithHighestGradeInSubject(String subject) {
+        Grade grade = gradeRepository.findTopBySubjectOrderByGradeDesc(subject);
+        if (grade != null) {
+            Student student = grade.getStudent();
+            return convertToStudentDTO(student);
+        }
+        return null;
+    }
+
+    private StudentDTO convertToStudentDTO(Student student) {
+        StudentDTO studentDTO = new StudentDTO();
+        studentDTO.setId(student.getId());
+        studentDTO.setName(student.getName());
+        studentDTO.setClassNumber(student.getClassNumber());
+        return studentDTO;
     }
 
 }
